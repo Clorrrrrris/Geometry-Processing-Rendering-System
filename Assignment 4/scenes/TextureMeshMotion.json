@@ -1,0 +1,27 @@
+{
+  "resolution": [512, 512],
+  "fast_mode": false,
+  "motion_blur": true,
+  "features": {
+    "reflections": false,
+    "refractions": false,
+    "textures": true,
+    "metaballs": false
+  },
+  "AA_jitter": true,
+  "AA_samples": 4,
+  "ambient": [0.15, 0.15, 0.15],
+  "env_map": "scenes/env_simple.png",
+  "camera": { "position": [3.0, 3.0, 8.0], "lookAt": [0.0, 0.5, 0.0], "up": [0.0, 1.0, 0.0], "fovy": 45.0 },
+  "materials": [
+    { "name": "texmat", "diffuse": [1.0, 1.0, 1.0], "specular": [0.3, 0.3, 0.3], "shininess": 16, "reflectivity": [0.0, 0.0, 0.0], "ior": 1.0, "transmission": [0.0, 0.0, 0.0], "texture": "scenes/checker.png" },
+    { "name": "ground", "diffuse": [0.6, 0.6, 0.6], "specular": [0.2, 0.2, 0.2], "shininess": 8, "reflectivity": [0.0, 0.0, 0.0], "ior": 1.0, "transmission": [0.0, 0.0, 0.0] }
+  ],
+  "objects": [
+    { "name": "floor", "type": "plane", "normal": [0.0, 1.0, 0.0], "position": [0.0, 0.0, 0.0], "materials": ["ground"] },
+    { "name": "boxmesh", "type": "mesh", "filepath": "./meshes/uvcube.obj", "position": [-1.0, 0.5, 0.0], "velocity": [1.5, 0.0, 0.0], "scale": [1.5, 1.0, 1.0], "materials": ["texmat"] }
+  ],
+  "lights": [
+    { "name": "key", "type": "point", "position": [4.0, 5.0, 4.0], "colour": [1.0, 1.0, 1.0], "power": 1.5, "attenuation": [0.0, 0.0, 1.0] }
+  ]
+}

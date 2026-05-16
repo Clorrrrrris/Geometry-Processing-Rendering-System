@@ -1,0 +1,25 @@
+{
+  "resolution": [960, 540],
+  "fast_mode": false,
+  "features": {
+    "reflections": false,
+    "refractions": false,
+    "textures": false,
+    "metaballs": false,
+    "bump": true
+  },
+  "AA_jitter": true,
+  "AA_samples": 2,
+  "ambient": [0.2, 0.2, 0.2],
+  "camera": { "position": [0.0, 2.0, 6.0], "lookAt": [0.0, 1.0, 0.0], "up": [0.0, 1.0, 0.0], "fovy": 45.0 },
+  "materials": [
+    { "name": "grey", "diffuse": [0.7, 0.7, 0.7], "specular": [0.3, 0.3, 0.3], "shininess": 16 }
+  ],
+  "objects": [
+    { "name": "floor", "type": "plane", "normal": [0.0, 1.0, 0.0], "position": [0.0, 0.0, 0.0], "materials": ["grey"] },
+    { "name": "sphere", "type": "sphere", "position": [0.0, 1.0, 0.0], "radius": 1.0, "materials": ["grey"] }
+  ],
+  "lights": [
+    { "name": "key", "type": "point", "position": [2.5, 4.0, 2.5], "colour": [1.0, 1.0, 1.0], "power": 1.5, "attenuation": [0.0, 0.0, 1.0] }
+  ]
+}

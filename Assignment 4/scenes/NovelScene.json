@@ -1,0 +1,48 @@
+{
+  "resolution": [960, 540],
+  "fast_mode": false,
+  "features": {
+    "reflections": true,
+    "refractions": true,
+    "textures": true,
+    "metaballs": true,
+    "bump": false
+  },
+  "AA_jitter": true,
+  "AA_samples": 2,
+  "ambient": [0.18, 0.18, 0.18],
+  "env_map": "scenes/env_simple.png",
+
+  "camera": { "position": [0.0, 3.0, 11.5], "lookAt": [0.0, 1.0, 0.0], "up": [0.0, 1.0, 0.0], "fovy": 38.0, "aperture": 0.02, "focal_dist": 10.0 },
+
+  "materials": [
+    { "name": "mirror", "diffuse": [0,0,0], "specular": [0,0,0], "shininess": 1, "reflectivity": [0.85,0.85,0.85] },
+    { "name": "glass", "diffuse": [0,0,0], "specular": [0.2,0.2,0.2], "shininess": 128, "reflectivity": [0.02,0.02,0.02], "ior": 1.5, "transmission": [1,1,1] },
+    { "name": "goo", "diffuse": [0.45, 1.0, 1.0], "specular": [0.6, 0.6, 0.6], "shininess": 32 },
+    { "name": "orange", "diffuse": [0.9, 0.5, 0.2], "specular": [0.3, 0.3, 0.3], "shininess": 24 },
+    { "name": "texmat", "diffuse": [1,1,1], "specular": [0.3,0.3,0.3], "shininess": 16, "texture": "scenes/checker.png" },
+    { "name": "wall", "diffuse": [0.2, 0.3, 0.6], "specular": [0.05, 0.05, 0.05], "shininess": 8 }
+  ],
+
+  "objects": [
+    { "name": "floor", "type": "plane", "normal": [0,1,0], "position": [0,0,0], "materials": ["mirror"] },
+    { "name": "backdrop", "type": "plane", "normal": [0,0,1], "position": [0,0,-5.0], "materials": ["wall"] },
+    { "name": "glass_sphere", "type": "sphere", "position": [-4.2, 1.0, -0.6], "radius": 0.8, "materials": ["glass"] },
+    { "name": "metablob", "type": "metaball", "threshold": 0.7,
+      "centers": [ [-1.2, 1.0, 1.6], [0.0, 1.0, 1.6], [1.2, 1.0, 1.6] ],
+      "radii":   [ 0.6, 0.6, 0.6 ],
+      "materials": ["goo"]
+    },
+    { "name": "cylinder", "type": "cylinder", "radius": 0.55, "y_min": 0.0, "y_max": 1.3, "closed": true,
+      "position": [2.4, 0.0, -1.0], "materials": ["orange"] },
+    { "name": "cone", "type": "cone", "radius": 0.7, "y_min": 0.0, "y_max": 1.3, "closed": true,
+      "position": [-2.4, 0.0, -0.8], "materials": ["orange"] },
+    { "name": "uvcube", "type": "mesh", "filepath": "./meshes/uvcube.obj", "position": [0.0, 0.65, -2.1], "scale": [0.9, 0.7, 0.9], "materials": ["texmat"] }
+  ],
+
+  "lights": [
+    { "name": "area_key", "type": "area", "position": [0.0, 5.0, 2.0], "u_dir": [2.5,0,0], "v_dir": [0,0,2.5], "normal": [0,-1,0], "colour": [1,1,1], "power": 3.5, "samples": 16 },
+    { "name": "fill", "type": "point", "position": [3.0, 3.5, -2.0], "colour": [0.6,0.7,1.0], "power": 1.0, "attenuation": [0,0,1] },
+    { "name": "back", "type": "point", "position": [0.0, 2.0, -4.0], "colour": [0.7, 0.8, 1.0], "power": 0.6, "attenuation": [0,0,1] }
+  ]
+}

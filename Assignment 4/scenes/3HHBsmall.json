@@ -1,0 +1,31 @@
+{
+"resolution": [960, 540],
+"AA_jitter": true, 
+"AA_samples": 3,
+"ambient": [0.2, 0.2, 0.2],
+"lights": [
+{ "name": "myLight1", "colour": [0.8, 0.3, 0.3], "position": [100, 70, 100], "power": 0.25, "type": "point" },
+{ "name": "myLight2", "colour": [0.8, 0.8, 0.8], "position": [0, 100, 60], "power": 0.75, "type": "point" }
+],
+"materials": [
+{ "name": "N", "diffuse": [0, 0, 1], "specular": [0.5, 0.5, 0.5], "shininess": 50 },
+{ "name": "C", "diffuse": [0.5, 0.5, 0.5], "specular": [0.5, 0.5, 0.5], "shininess": 50 },
+{ "name": "O", "diffuse": [1, 0, 0], "specular": [0.5, 0.5, 0.5], "shininess": 50 },
+{ "name": "S", "diffuse": [1, 1, 0], "specular": [0.5, 0.5, 0.5], "shininess": 50 },
+{ "name": "black", "diffuse": [0.9, 0.9, 0.9], "specular": [0, 0, 0], "shininess": 0 },
+{ "name": "white", "diffuse": [1, 1, 1], "specular": [0, 0, 0], "shininess": 0 }
+],
+"camera": {
+"position": [30, 30, 100],
+"lookAt": [8.561, 17.703, 5.038],
+"up": [0, 1, 0],
+"fovy": 5
+},
+"objects": [
+{ "type": "sphere", "position": [6.452, 16.459, 4.843], "radius": 1.2, "materials": ["N"] },
+{ "type": "sphere", "position": [7.060, 17.792, 4.760], "radius": 1.2, "materials": ["C"] },
+{ "type": "sphere", "position": [8.561, 17.703, 5.038], "radius": 1.2, "materials": ["C"] },
+{ "type": "sphere", "position": [8.992, 17.182, 6.072], "radius": 1.2, "materials": ["O"] },
+{ "type": "sphere", "position": [6.342, 18.738, 5.727], "radius": 1.2, "materials": ["C"] }
+]
+}

@@ -1,0 +1,21 @@
+{
+"resolution": [512, 512],
+"AA_jitter": true, 
+"AA_samples": 16,
+"ambient": [0.1, 0.1, 0.1],
+"camera": { "position": [6.0, 2.5, 10.0], "lookAt": [0.0, 1.5, 0.0], "up": [0.0, 1.0, 0.0], "fovy": 45.0 },
+"materials": [
+    { "name": "white", "diffuse": [1.0, 1.0, 1.0], "specular": [0.8, 0.8, 0.8], "shininess": 32 }, 
+    { "name": "red", "diffuse": [1.0, 0.0, 0.0], "specular": [0.8, 0.8, 0.8], "shininess": 32 },
+    { "name": "blue", "diffuse": [0.3, 0.6, 1.0], "specular": [0.8, 0.8, 0.8], "shininess": 32 }
+],
+"objects": [
+    { "name": "ground",  "type": "plane", "normal": [0.0, 1.0, 0.0], "position": [0.0, 0.0, 0.0], "materials": ["blue"] },
+    { "name": "bunny", "type": "mesh", "filepath": "./meshes/bunny.obj", "position": [-2.0, 1.75, 0.0], "rotation": [0.0, 45.0, 0.0], "scale": 3.0, "materials": ["white"] },
+    { "name": "torus", "type": "mesh", "filepath": "./meshes/torus.obj", "position": [2.0, 0.5, 0.0], "rotation": [0.0, 0.0, 0.0], "scale": 0.6, "materials": ["red"] }
+],
+"lights": [
+    { "name": "light1",  "type": "point", "position": [-5.0, 5.0, 5.0],  "colour": [1.0, 1.0, 1.0], "power": 0.5, "attenuation": [0.0, 0.0, 1.0] },
+    { "name": "light2",  "type": "point", "position": [5.0, 10.0, 5.0],  "colour": [1.0, 1.0, 1.0], "power": 0.9, "attenuation": [0.0, 0.0, 1.0] }
+]
+}

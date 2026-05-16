@@ -1,0 +1,29 @@
+{
+  "resolution": [512, 512],
+  "fast_mode": false,
+  "features": {
+    "reflections": true,
+    "refractions": false,
+    "textures": false,
+    "metaballs": false
+  },
+  "AA_jitter": false,
+  "AA_samples": 1,
+  "ambient": [0.02, 0.02, 0.02],
+  "env_map": "scenes/env_simple.png",
+  "camera": { "position": [0.0, 1.5, 6.0], "lookAt": [0.0, 0.5, 0.0], "up": [0.0, 1.0, 0.0], "fovy": 45.0 },
+  "materials": [
+    { "name": "mirror", "diffuse": [0.0, 0.0, 0.0], "specular": [0.0, 0.0, 0.0], "shininess": 1, "reflectivity": [1.0, 1.0, 1.0], "ior": 1.5 },
+    { "name": "red", "diffuse": [1.0, 0.05, 0.05], "specular": [0.8, 0.8, 0.8], "shininess": 64, "reflectivity": [0.0, 0.0, 0.0], "ior": 1.5 },
+    { "name": "blue", "diffuse": [0.05, 0.2, 1.0], "specular": [0.8, 0.8, 0.8], "shininess": 64, "reflectivity": [0.0, 0.0, 0.0], "ior": 1.5 }
+  ],
+  "objects": [
+    { "name": "floor", "type": "plane", "normal": [0.0, 1.0, 0.0], "position": [0.0, 0.0, 0.0], "materials": ["mirror"] },
+    { "name": "red_sphere", "type": "sphere", "position": [-1.0, 0.8, 0.0], "radius": 0.8, "materials": ["red"] },
+    { "name": "blue_sphere", "type": "sphere", "position": [1.2, 0.5, -0.3], "radius": 0.5, "materials": ["blue"] }
+  ],
+  "lights": [
+    { "name": "key", "type": "point", "position": [3.0, 4.0, 3.0], "colour": [1.0, 1.0, 1.0], "power": 1.0, "attenuation": [0.0, 0.0, 1.0] },
+    { "name": "fill", "type": "point", "position": [-3.0, 2.0, 2.0], "colour": [0.6, 0.6, 0.7], "power": 0.6, "attenuation": [0.0, 0.0, 1.0] }
+  ]
+}

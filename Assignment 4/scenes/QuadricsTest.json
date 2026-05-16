@@ -1,0 +1,20 @@
+{
+  "resolution": [512, 512],
+  "AA_jitter": false,
+  "AA_samples": 1,
+  "ambient": [0.05, 0.05, 0.05],
+  "camera": { "position": [0.0, 2.5, 8.0], "lookAt": [0.0, 1.0, 0.0], "up": [0.0, 1.0, 0.0], "fovy": 45.0 },
+  "materials": [
+    { "name": "gray", "diffuse": [0.6, 0.6, 0.6], "specular": [0.3, 0.3, 0.3], "shininess": 32, "reflectivity": [0.0, 0.0, 0.0] },
+    { "name": "cyan", "diffuse": [0.2, 0.8, 0.9], "specular": [0.5, 0.5, 0.6], "shininess": 32, "reflectivity": [0.0, 0.0, 0.0] },
+    { "name": "orange", "diffuse": [1.0, 0.5, 0.1], "specular": [0.5, 0.5, 0.5], "shininess": 16, "reflectivity": [0.0, 0.0, 0.0] }
+  ],
+  "objects": [
+    { "name": "floor", "type": "plane", "normal": [0.0, 1.0, 0.0], "position": [0.0, 0.0, 0.0], "materials": ["gray"] },
+    { "name": "cyl", "type": "cylinder", "radius": 1.0, "y_min": 0.0, "y_max": 2.0, "closed": true, "position": [-1.5, 0.0, 0.0], "materials": ["cyan"] },
+    { "name": "cone", "type": "cone", "radius": 1.0, "y_min": 0.0, "y_max": 2.0, "closed": true, "position": [1.5, 0.0, 0.0], "materials": ["orange"] }
+  ],
+  "lights": [
+    { "name": "key", "type": "point", "position": [4.0, 6.0, 4.0], "colour": [1.0, 1.0, 1.0], "power": 1.0, "attenuation": [0.0, 0.0, 1.0] }
+  ]
+}
